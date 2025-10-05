@@ -1,16 +1,76 @@
 ---
-
+import Image from 'astro/components/Image.astro';
+import MainLayout from '../layouts/MainLayout.astro'
+const bestProducts = [
+    {
+        id: 1,
+        name: "Solar Panel Residential",
+        description: "Transform your home with clean and renovate energy.",
+        image: "/src/assets/images/hero/hero-01.png"
+    },
+    {
+        id: 1,
+        name: "Intelligent Recyclable System ",
+        description: "Optimize the management of waste with avance technology.",
+        image: "/src/assets/images/hero/hero-02.png"
+    },
+    {
+        id: 1,
+        name: "Compact Electric Car",
+        description: "Travel sustainably with our electric cars.",
+        image: "/src/assets/images/hero/hero-03.png"
+    }
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<MainLayout title="Home Page">
+<section class="space-y-10 h-full flex flex-col p-5">
+    <section class="flex-1">
+        <div class="bg-hero">
+            <div class="text-left max-w-3xl space-y-5">
+                <h1 class="text-2xl font-bold md:text-5xl">Innovative Solutions to a Sustainable Future</h1>
+                <p class="text-lg font-mono md:text-lg">Discover how EcoSolutions is leading the road to a more green world with our innovative and sustainable solutions.</p>
+                <div class="flex justify-center items-center">
+                    <a class="bg-red-500 py-2 px-3 text-lg rounded-lg font-semibold hover:bg-red-600 active:bg-red-500 md:py-3 md:px-5" href="/products">Explore products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flex-1 grid place-items-center">
+        <h1 class="text-3xl font-bold">Our featured products</h1>
+        <section class="flex gap-3 mt-5 flex-col md:flex-row">
+            {bestProducts.map(({name, description, image}: any)=> (
+                <div class="flex justify-start items-center flex-col-reverse md:flex-col md:items-start flex-1">
+                        <div class="">
+                            <Image src={image} alt={name} width={300} height={200} />
+                        </div>
+                        <div class="flex flex-col text-center text-balance md:mt-3 md:text-left">
+                            <h2 class="font-semibold text-2xl md:text-2xl">{name}</h2>
+                            <p class="text-xl font-light text-red-900 md:text-md">{description}</p>
+                        </div>
+                </div>
+            )
+            )}
+        </section>
+    </section>
+</section>
+
+</MainLayout>
+
+
+<style is:inline> 
+.bg-hero {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.4)), url('/src/assets/images/hero/01-green.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+    
+}
+</style>

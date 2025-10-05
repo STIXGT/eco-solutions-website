@@ -1,0 +1,35 @@
+
+---
+const links = [
+  { href: '/', text: 'Home' },
+  { href: '/products', text: 'Products' },
+  { href: '/testimonials', text: 'Testimonials' },
+  { href: '/contact', text: 'Contact' },
+
+  ];
+const currentPath = Astro.url.pathname;
+console.log(currentPath);
+---
+  <aside class="p-12 mr-4 font-mono hidden lg:justify-between lg:flex lg:flex-col">
+      <div>
+        <h2 class="text-4xl">EcoSolutions</h2>
+        <p class="text-red-900">Innovate for a sustainable future.</p>
+      </div>
+    <nav class="mt-6">
+      <ul>
+        {links.map(({ href, text }) => (
+          <li >
+              <a 
+                href={href}
+                class="text-neutral-900 text-2xl block p-10 hover:bg-zinc-200 rounded-r-full active:bg-zinc-300 transition-colors duration-200 ease-in-out"
+                >
+                  {text}
+              </a>
+              
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <span>Hecho por Stiven Guanoquiza 🌍</span>
+  </aside>
