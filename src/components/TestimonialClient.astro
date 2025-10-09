@@ -1,0 +1,23 @@
+---
+const { clientName, date, image, numberOfStars, feedback } = Astro.props;
+import starIcon from '@assets/icons/star.svg';
+---
+<div class="grid gap-2">
+    <div class="flex items-center gap-4">
+        <img src={image} alt={clientName} class="w-10 h-10 rounded-full"/>
+        <div>
+            <h2 class="font-semibold text-md">{clientName}</h2>
+            <p class="text-xs text-[#876363]">{date}</p>
+        </div>
+    </div>
+    <div class="flex gap-2">
+        {
+            Array.from({ length: numberOfStars }).map(() => (
+                <img src={starIcon.src} alt="Star" class="w-4 h-4 inline-block"/>
+            ))
+        }
+    </div>
+    <div>
+        <p class="text-sm text-gray-700 text-balance">{feedback}</p>
+    </div>
+</div>

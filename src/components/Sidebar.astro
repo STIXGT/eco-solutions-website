@@ -1,35 +1,43 @@
 
 ---
+import homeIcon from '@assets/icons/home.svg';
+import productsIcon from '@assets/icons/prod.svg';
+import testimonialsIcon from '@assets/icons/testimonials.svg';
+import contactIcon from '@assets/icons/contact.svg';
 const links = [
-  { href: '/', text: 'Home' },
-  { href: '/products', text: 'Products' },
-  { href: '/testimonials', text: 'Testimonials' },
-  { href: '/contact', text: 'Contact' },
+  { href: '/', text: 'Home', icon: homeIcon },
+  { href: '/products', text: 'Products', icon: productsIcon },
+  { href: '/testimonials', text: 'Testimonials', icon: testimonialsIcon },
+  { href: '/contact', text: 'Contact', icon: contactIcon },
 
   ];
 const currentPath = Astro.url.pathname;
 console.log(currentPath);
 ---
-  <aside class="p-12 mr-4 font-mono hidden lg:justify-between lg:flex lg:flex-col">
-      <div>
-        <h2 class="text-4xl">EcoSolutions</h2>
-        <p class="text-red-900">Innovate for a sustainable future.</p>
-      </div>
-    <nav class="mt-6">
-      <ul>
-        {links.map(({ href, text }) => (
-          <li >
-              <a 
-                href={href}
-                class="text-neutral-900 text-2xl block p-10 hover:bg-zinc-200 rounded-r-full active:bg-zinc-300 transition-colors duration-200 ease-in-out"
-                >
-                  {text}
-              </a>
-              
-          </li>
-        ))}
-      </ul>
-    </nav>
+  <aside class="p-10 mr-4 font-mono h-svh hidden lg:justify-between lg:flex lg:flex-col lg:sticky top-0 right-0 bg-[#F5F0F0]">
+        <div>
+          <h2 class="text-3xl">EcoSolutions</h2>
+          <p class="text-[#876363]">Innovate for a sustainable future.</p>
+        </div>
+      <nav class="mt-6">
+        <ul>
+          {links.map(({ href, text, icon }) => (
+            <li>
+            
+                <a 
+                  href={href}
+                  class="text-neutral-900 text-2xl p-8 hover:bg-[#e4e2e2] rounded-r-full active:bg-zinc-300 transition-colors duration-200 ease-in-out flex items-center gap-3"
+                  >
+                    <picture>
+                      <img src={icon.src} alt="" class="" />
+                    </picture>
+                    {text}
+                </a>
+                
+            </li>
+          ))}
+        </ul>
+      </nav>
 
-    <span>Hecho por Stiven Guanoquiza 🌍</span>
+      <span>Made by Stiven Guanoquiza 🌍</span>
   </aside>

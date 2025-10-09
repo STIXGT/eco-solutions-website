@@ -1,10 +1,70 @@
 
 ---
-import MainLayout from '../layouts/MainLayout.astro'
+import Product from '@/components/Product.astro';
+import MainLayout from '@layouts/MainLayout.astro'
+import searchIcon from '@assets/icons/search.svg';
+import classicShirt from '@assets/images/products/classic-t-shirt.png';
+import hoodie from '@assets/images/products/hoodie.png';
+import urbanShoes from '@assets/images/products/urban-shoes.png';
+import baseballCap from '@assets/images/products/baseball-cap.png';
+import lightJacket from '@assets/images/products/light-jacket.png';
+import sportSocks from '@assets/images/products/sport-socks.png';
+
+const products = [{
+    title: "Classic T-Shirt",
+    price: "$25.00",
+    image: classicShirt.src,
+}, {
+    title: "Hoodie",
+    price: "$50.00",
+    image: hoodie.src,
+}, {
+    title: "Urban Shoes",
+    price: "$80.00",
+    image: urbanShoes.src
+}, {
+    title: "Baseball Cap",
+    price: "$20.00",
+    image: baseballCap.src
+}, {
+    title: "Light Jacket",
+    price: "$75.00",
+    image: lightJacket.src
+}, {
+    title: "Sport Socks",
+    price: "$15.00",
+    image: sportSocks.src
+}]
 ---
 
 
 <MainLayout title="Products Page">
 
-<h1>Hola Products</h1>
-</MainLayout>
+<section class="grid grid-rows-[250px,1fr,250px] min-h-screen ">
+   <section class="grid items-center mt-5 mx-6"> 
+        <div class="relative">
+            <label for="search-input" class="absolute left-4 top-1/2 transform -translate-y-1/2">
+            <img src={searchIcon.src} alt="search icon"></label>
+            
+            <input id="search-input" class="bg-[#F5F0F0] rounded-xl w-full py-2 pl-12 hover:bg-stone-200" type="text" placeholder=" Search Products" />
+        </div>  
+   </section>
+    <section>
+        <h1 class="my-5 font-semibold text-2xl mx-7">All Products</h1>
+        <div class="grid grid-cols-2 s sm:grid-cols-3 md:grid-cols-5 gap-4">
+            {products.map(({ image, title, price }) => (
+                <Product {image} {title} {price} />
+            ))}
+    </section>
+    <section class="mx-auto">
+        <div>
+            <div class="inline-block rounded-full hover:bg-[#F5F0F0] px-4 py-3 hover:cursor-pointer active:bg-zinc-300 transition-colors duration-100 ease-in-out" > prev </div>
+            <div class="inline-block rounded-full hover:bg-[#F5F0F0] px-4 py-2 hover:cursor-pointer active:bg-zinc-300 transition-colors duration-100 ease-in-out">1</div>
+            <div class="inline-block rounded-full hover:bg-[#F5F0F0] px-4 py-2 hover:cursor-pointer active:bg-zinc-300 transition-colors duration-100 ease-in-out">2</div>
+            <div class="inline-block rounded-full hover:bg-[#F5F0F0] px-4 py-2 hover:cursor-pointer active:bg-zinc-300 transition-colors duration-100 ease-in-out">3</div>
+            <div class="inline-block rounded-full hover:bg-[#F5F0F0] px-4 py-2 hover:cursor-pointer active:bg-zinc-300 transition-colors duration-100 ease-in-out">4</div>
+            <div class="inline-block rounded-full hover:bg-[#F5F0F0] px-4 py-2 hover:cursor-pointer active:bg-zinc-300 transition-colors duration-100 ease-in-out">next</div>
+            </div>
+    </section>
+</section>
+</MainLayout>   

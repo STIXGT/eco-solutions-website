@@ -1,0 +1,21 @@
+---
+
+interface Props {
+    title: string;
+    price: string;
+    image: any;
+}
+const { image, title, price } = Astro.props;
+console.log("image:", image);
+---
+
+<div class="flex p-3 flex-col
+ hover:bg-[#F5F0F0] hover:cursor-pointer rounded-lg active:bg-zinc-300 transition-colors duration-100 ease-in-out">
+  
+    <img class="w-[85%] mb-4 mx-auto" src={image} alt={title} width={200} height={200}/>
+    <div class="ml-3">
+        <h2 class="text-lg font-semibold">{title}</h2>
+        <p class="text-[#876363] ">{price}</p>
+    </div>
+
+</div>

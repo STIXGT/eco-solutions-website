@@ -1,0 +1,11 @@
+---
+
+const { icon, typeInfo, info  } = Astro.props;
+---
+<div class="flex items-center gap-4">
+    <img class="p-3 bg-[#F5F0F0] rounded-md" src={icon} alt="Contact Us">
+    <div class="flex flex-col">
+        <h3 class="text-lg font-semibold">{typeInfo}</h3>
+        <p class="text-[#876363]">{info}</p>
+    </div>
+</div>
