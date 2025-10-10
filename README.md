@@ -1,54 +1,65 @@
-# 🚀 EcoSolution with Astro
+# EcoSolutions - Proyecto de Portafolio Frontend con Astro
 
-¡Bienvenido al repositorio de mi sitio web personal! Este proyecto es una demostración de cómo construir un sitio web moderno, rápido y estético utilizando **Astro** y **Tailwind CSS**.
+Este repositorio contiene el código fuente de un sitio web moderno y de alto rendimiento para **EcoSolutions**, una marca ficticia dedicada a soluciones ecológicas. El proyecto fue desarrollado como una pieza de portafolio para demostrar mis habilidades en el desarrollo frontend utilizando tecnologías web modernas.
 
-![Placeholder de la imagen del sitio web](https://via.placeholder.com/800x400.png?text=Imagen+de+mi+Sitio+Web)
-_(Puedes reemplazar la URL de arriba con una captura de pantalla de tu proyecto)_
+---
+
+## 🚀 Demo en Vivo
+
+_[Aquí puedes agregar el enlace a la demo desplegada de tu proyecto]_
 
 ---
 
 ## ✨ Características Principales
 
-El sitio web cuenta con varias secciones diseñadas para ofrecer una experiencia de usuario completa:
+El sitio web está diseñado para ofrecer una experiencia de usuario completa y fluida, e incluye las siguientes secciones:
 
-- 🏠 **Página de Inicio**: Una landing page atractiva que presenta el propósito del sitio.
-- 🛍️ **Productos**: Una galería para mostrar diferentes productos de forma organizada.
-- 🌟 **Testimonios**: Una sección dedicada a mostrar las opiniones y comentarios de los clientes.
-- 📞 **Contacto**: Información y medios para que los visitantes puedan ponerse en contacto.
+-   🏠 **Página de Inicio**: Una landing page atractiva que presenta la misión y visión de la marca.
+-   🛍️ **Catálogo de Productos**: Una galería limpia y organizada para mostrar los productos sostenibles de la marca.
+-   🌟 **Testimonios**: Una sección dedicada a mostrar la confianza y satisfacción de los clientes.
+-   📞 **Página de Contacto**: Un formulario e información de contacto para facilitar la comunicación.
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
-Este proyecto fue construido con un conjunto de tecnologías modernas enfocadas en el rendimiento y la experiencia de desarrollo:
+La selección de tecnologías se centró en el rendimiento, la eficiencia en el desarrollo y las buenas prácticas.
 
-- **[Astro](https://astro.build/)**: Framework web para construir sitios rápidos y optimizados.
-- **[Tailwind CSS](https://tailwindcss.com/)**: Framework de CSS "utility-first" para un diseño rápido y responsivo.
-- **[TypeScript](https://www.typescriptlang.org/)**: Superset de JavaScript que añade tipado estático para un código más robusto.
-- **[PNPM](https://pnpm.io/)**: Gestor de paquetes rápido y eficiente en el uso de espacio en disco.
+-   **[Astro](https://astro.build/)**: Framework web utilizado por su arquitectura de "islas" que permite enviar cero JavaScript por defecto, resultando en sitios web extremadamente rápidos.
+-   **[Tailwind CSS](https://tailwindcss.com/)**: Framework de CSS "utility-first" para la creación rápida y consistente de interfaces de usuario personalizadas y responsivas.
+-   **[TypeScript](https://www.typescriptlang.org/)**: Añade un sistema de tipado estático a JavaScript, lo que mejora la robustez del código y la experiencia de desarrollo.
+-   **[PNPM](https://pnpm.io/)**: Gestor de paquetes rápido y eficiente en el uso del espacio en disco.
 
 ---
 
-## ⚙️ Guía de Inicio Rápido
+## 🎯 Objetivos del Proyecto
 
-Sigue estos pasos para levantar una copia del proyecto en tu máquina local.
+Este proyecto fue creado con el objetivo de demostrar las siguientes competencias:
+
+-   **Maquetación web semántica y responsiva** con HTML5 y Tailwind CSS.
+-   **Desarrollo basado en componentes** utilizando la sintaxis `.astro`.
+-   **Optimización del rendimiento web** (WPO) aprovechando las características de Astro.
+-   **Estructura de proyectos frontend** escalable y mantenible.
+
+---
+
+## ⚙️ Cómo Empezar
+
+Sigue estos pasos para ejecutar una copia del proyecto en tu máquina local.
 
 ### Prerrequisitos
 
 Asegúrate de tener [Node.js](https://nodejs.org/) (versión 18 o superior) y [pnpm](https://pnpm.io/installation) instalados.
 
-### Instalación
+### Pasos
 
 1.  **Clona el repositorio:**
-
     ```bash
     git clone https://github.com/tu-usuario/notion-practice.git
     cd notion-practice
     ```
 
 2.  **Instala las dependencias:**
-    Con `pnpm` (recomendado, ya que el proyecto usa `pnpm-lock.yaml`):
-
     ```bash
     pnpm install
     ```
@@ -58,31 +69,26 @@ Asegúrate de tener [Node.js](https://nodejs.org/) (versión 18 o superior) y [p
     pnpm dev
     ```
 
-¡Y listo! Abre [http://localhost:4321](http://localhost:4321) en tu navegador para ver el sitio en acción.
+¡Listo! Abre [http://localhost:4321](http://localhost:4321) en tu navegador para ver el sitio en acción.
 
 ---
 
 ## 📜 Scripts Disponibles
 
-Estos son los scripts principales que puedes usar desde la raíz del proyecto:
-
-- `pnpm dev`: Inicia el servidor de desarrollo de Astro en modo "hot-reload".
-- `pnpm build`: Compila el sitio para producción en el directorio `dist/`.
-- `pnpm preview`: Sirve el sitio de producción localmente para previsualizar los cambios.
-- `pnpm astro`: Accede a la CLI de Astro para comandos adicionales.
+-   `pnpm dev`: Inicia el servidor de desarrollo con hot-reloading.
+-   `pnpm build`: Compila el sitio para producción en la carpeta `dist/`.
+-   `pnpm preview`: Levanta un servidor local para previsualizar la versión de producción.
 
 ---
 
 ## 📁 Estructura del Proyecto
-
-El proyecto sigue la estructura recomendada por Astro para una organización clara y mantenible:
 
 ```
 .
 ├── public/              # Assets estáticos (imágenes, favicons)
 ├── src/
 │   ├── assets/          # Imágenes e iconos para componentes
-│   ├── components/      # Componentes reutilizables de Astro (.astro)
+│   ├── components/      # Componentes reutilizables (.astro)
 │   ├── layouts/         # Plantillas de página (.astro)
 │   ├── pages/           # Rutas y páginas del sitio (.astro)
 │   └── styles/          # Estilos globales (global.css)
@@ -90,7 +96,3 @@ El proyecto sigue la estructura recomendada por Astro para una organización cla
 ├── package.json         # Dependencias y scripts
 └── tsconfig.json        # Configuración de TypeScript
 ```
-
----
-
-¡Gracias por visitar mi proyecto! Si tienes alguna idea o sugerencia, no dudes en abrir un _issue_ o un _pull request_.
