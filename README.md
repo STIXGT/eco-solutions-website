@@ -55,8 +55,8 @@ Asegúrate de tener [Node.js](https://nodejs.org/) (versión 18 o superior) y [p
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone https://github.com/tu-usuario/notion-practice.git
-    cd notion-practice
+    git clone https://github.com/STIXGT/eco-solutions-website.git
+    cd eco-solutions-website
     ```
 
 2.  **Instala las dependencias:**
