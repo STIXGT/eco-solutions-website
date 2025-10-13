@@ -12,32 +12,31 @@ const links = [
 
   ];
 const currentPath = Astro.url.pathname;
-console.log(currentPath);
+
 ---
-  <aside class="p-10 mr-4 font-mono h-svh hidden lg:justify-between lg:flex lg:flex-col lg:sticky top-0 right-0 bg-[#F5F0F0]">
-        <div>
-          <h2 class="text-3xl">EcoSolutions</h2>
-          <p class="text-[#876363]">Innovate for a sustainable future.</p>
-        </div>
-      <nav class="mt-6">
-        <ul>
-          {links.map(({ href, text, icon }) => (
-            <li>
+<!-- flex flex-col md:p-10 md:mr-4 md:justify-between md:h-svh items-center -->
+  <aside class="sticky top-0 right-0 py-3 bg-[#F5F0F090] z-1 font-mono flex flex-col justify-center items-center lg:p-10 lg:mr-4 lg:justify-between lg:h-svh">
+    <div>
+      <h2 class="text-2xl lg:text-3xl font-semibold">EcoSolutions</h2>
+      <p class="hidden lg:block text-[#876363]">Innovate for a sustainable future.</p>
+    </div>
+    
+    <nav class="">
+      <ul class="flex gap-2 lg:flex-col">
+        {links.map(({ href, text, icon }) => (
+          <li class="flex justify-center items-center md:block">
+            <a
+              href={href}
+              class={`text-neutral-900 text-2xl rounded-full p-6 lg:py-8 lg:px-8 hover:bg-[#e4e2e2] lg:rounded-r-full active:bg-zinc-300 transition-colors duration-200 ease-in-out flex items-center gap-3 ${currentPath === href ? ' bg-gradient-to-t to-blue-200 from-green-200' : ''}`}
+            >
             
-                <a 
-                  href={href}
-                  class="text-neutral-900 text-2xl p-8 hover:bg-[#e4e2e2] rounded-r-full active:bg-zinc-300 transition-colors duration-200 ease-in-out flex items-center gap-3"
-                  >
-                    <picture>
-                      <img src={icon.src} alt="" class="" />
-                    </picture>
-                    {text}
-                </a>
-                
-            </li>
+                <img src={icon.src} alt="" class="w-5 h-auto" />
+                <span class="text-neutral-900 hidden md:block text-sm lg:text-xl">{text}</span>
+              </a>
+           </li>
           ))}
         </ul>
       </nav>
 
-      <span>Made by Stiven Guanoquiza 🌍</span>
+      <span class="hidden lg:block">Made by Stiven Guanoquiza 🌍</span>
   </aside>

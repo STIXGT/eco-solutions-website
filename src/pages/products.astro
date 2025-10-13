@@ -49,9 +49,9 @@ const products = [{
             <input id="search-input" class="bg-[#F5F0F0] rounded-xl w-full py-2 pl-12 hover:bg-stone-200" type="text" placeholder=" Search Products" />
         </div>  
    </section>
-    <section>
+    <section class="mx-5"> 
         <h1 class="my-5 font-semibold text-2xl mx-7">All Products</h1>
-        <div class="grid grid-cols-2 s sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <div class="grid grid-cols-2 s sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {products.map(({ image, title, price }) => (
                 <Product {image} {title} {price} />
             ))}
