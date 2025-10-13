@@ -29,7 +29,7 @@ const bestProducts = [
 
 <MainLayout title="Home Page">
     <section class="grid grid-rows-[2fr,1fr] p-5 gap-5">
-        <section class="bg-hero p-5">
+        <section class={`bg-hero p-5`} style={`background-image: linear-gradient( rgba(0, 0, 0, 0.4)), url(${backgroundHero.src});`}>
                 <div class="text-left max-w-3xl space-y-5">
                     <h1 class="text-2xl font-bold md:text-5xl">Innovative Solutions to a Sustainable Future</h1>
                     <p class="text-lg font-mono md:text-lg">Discover how EcoSolutions is leading the road to a more green world with our innovative and sustainable solutions.</p>
@@ -59,7 +59,6 @@ const bestProducts = [
 
 <style is:inline> 
 .bg-hero {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.4)), url("/src/assets/images/hero/01-green.png");
     background-size: cover;
     background-position: center;
     display: flex;
