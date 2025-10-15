@@ -6,13 +6,12 @@ import testimonialsIcon from '@assets/icons/testimonials.svg';
 import contactIcon from '@assets/icons/contact.svg';
 const links = [
   { href: '/', text: 'Home', icon: homeIcon },
-  { href: '/products', text: 'Products', icon: productsIcon },
-  { href: '/testimonials', text: 'Testimonials', icon: testimonialsIcon },
-  { href: '/contact', text: 'Contact', icon: contactIcon },
+  { href: '/products/', text: 'Products', icon: productsIcon },
+  { href: '/testimonials/', text: 'Testimonials', icon: testimonialsIcon },
+  { href: '/contact/', text: 'Contact', icon: contactIcon },
 
   ];
 const currentPath = Astro.url.pathname;
-
 ---
 <!-- flex flex-col md:p-10 md:mr-4 md:justify-between md:h-svh items-center -->
   <aside class="sticky top-0 right-0 py-3 bg-[#F5F0F090] z-1 font-mono flex flex-col justify-center items-center lg:p-10 lg:mr-4 lg:justify-between lg:h-svh">
@@ -43,8 +42,3 @@ const currentPath = Astro.url.pathname;
 
       <span class="hidden lg:block">Made by Stiven Guanoquiza 🌍</span>
   </aside>
-
-  <script>
-    let currentPath = Astro.url.pathname;
-    console.log("Current Path:", currentPath)
-  </script>
